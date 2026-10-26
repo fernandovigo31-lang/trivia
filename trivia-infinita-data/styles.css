@@ -1,0 +1,25 @@
+
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,Segoe UI,Roboto,sans-serif;background:radial-gradient(circle at 20% 0,#3b2a7a,#12122b 60%);color:#f2f2ff;min-height:100vh}
+#app{max-width:860px;margin:auto;padding:16px}h1{margin:.2em 0;font-size:2rem}h2{margin:.6em 0 .3em}
+.card{background:#ffffff14;border:1px solid #ffffff22;border-radius:16px;padding:14px;margin:10px 0;backdrop-filter:blur(6px)}
+button{font:inherit;color:inherit;background:#6c4cff;border:0;border-radius:12px;padding:12px 14px;cursor:pointer;transition:.15s}
+button:hover{transform:translateY(-2px);background:#8266ff}.g{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+.chip{background:#ffffff18;padding:8px 10px;border-radius:20px;font-size:.9rem}.chip.on{background:#00b894;color:#06231c}
+.bar{height:10px;background:#ffffff22;border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,#00e5a0,#ffd54a,#ff5470);transition:width .1s linear}
+.xp i{background:#ffd54a}.opt{text-align:left;background:#ffffff1a;font-size:1.05rem}.opt.ok{background:#00b894!important;animation:pop .4s}.opt.bad{background:#e84a5f!important;animation:shake .4s}
+.q{font-size:1.3rem;margin:12px 0}.row{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:center}
+.sm{font-size:.85rem;opacity:.8}.toast{position:fixed;top:12px;right:12px;background:#ffd54a;color:#222;padding:10px 14px;border-radius:12px;animation:pop .4s;z-index:9}
+.flashok{animation:fo .5s}.flashbad{animation:fb .5s}select{font:inherit;padding:8px;border-radius:10px}
+@keyframes pop{50%{transform:scale(1.06)}}@keyframes shake{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+@keyframes fo{from{box-shadow:inset 0 0 120px #00e5a099}}@keyframes fb{from{box-shadow:inset 0 0 120px #ff547099}}
+
+
+.modal-backdrop{position:fixed;inset:0;z-index:20;background:#080817c9;display:grid;place-items:center;padding:16px;animation:fadein .18s ease-out}
+.modal{width:min(760px,100%);max-height:min(90vh,860px);overflow:auto;background:#191936;border:1px solid #8d7aff66;border-radius:22px;box-shadow:0 24px 80px #0009;padding:20px;animation:modalin .2s ease-out}
+.modal-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.modal-head h2{margin:.1em 0}.modal-close{background:#ffffff18;padding:8px 12px}.cat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(195px,1fr));gap:9px;margin:12px 0}
+.cat-option{display:flex;gap:10px;align-items:center;text-align:left;background:#ffffff0c;border:1px solid #ffffff20;border-radius:14px;padding:11px;transition:background .16s,border-color .16s,transform .16s;cursor:pointer}
+.cat-option:hover{transform:translateY(-1px);border-color:#00d4c6aa}.cat-option.selected{background:#00b8aa26;border-color:#00e5d4;box-shadow:0 0 0 1px #00e5a033 inset}
+.cat-option input{accent-color:#00d4c6;width:18px;height:18px;pointer-events:none}.cat-name{font-weight:650}.cat-count{display:block;font-size:.78rem;opacity:.72;margin-top:2px}.modal-tools,.modal-fields,.modal-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:12px 0}.modal-fields label{display:grid;gap:5px;min-width:170px;flex:1}.modal select{background:#25254a;color:#f2f2ff;border:1px solid #ffffff30}.modal-actions{justify-content:flex-end;border-top:1px solid #ffffff1c;padding-top:14px}.button-secondary{background:#ffffff18}.button-accent{background:#00a99c;color:#041c1c}.modal-summary{opacity:.78;font-size:.9rem}
+@keyframes fadein{from{opacity:0}to{opacity:1}}@keyframes modalin{from{opacity:0;transform:translateY(8px) scale(.99)}to{opacity:1;transform:none}}
+@media(max-width:520px){.modal{padding:15px;border-radius:18px}.cat-grid{grid-template-columns:1fr}.modal-fields label{min-width:100%}.modal-actions button{flex:1}}
+.action-backdrop{z-index:30}.action-modal{width:min(460px,100%);max-height:90vh}.action-modal .modal-head h2{margin:.1em 0}.dialog-message{line-height:1.55;opacity:.88;margin:14px 0 22px}.button-danger{background:#d9435f;color:#fff}.button-danger:hover{background:#f05270}
